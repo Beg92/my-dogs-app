@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-dogs-app/static/css/main.1ce71259.css",
+    "main.js": "/my-dogs-app/static/js/main.133941e6.js",
+    "static/js/787.3013daba.chunk.js": "/my-dogs-app/static/js/787.3013daba.chunk.js",
+    "index.html": "/my-dogs-app/index.html",
+    "main.1ce71259.css.map": "/my-dogs-app/static/css/main.1ce71259.css.map",
+    "main.133941e6.js.map": "/my-dogs-app/static/js/main.133941e6.js.map",
+    "787.3013daba.chunk.js.map": "/my-dogs-app/static/js/787.3013daba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ce71259.css",
+    "static/js/main.133941e6.js"
+  ]
+}
