@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Component } from 'react';
+import { useEffect, useState } from 'react';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [data, setData] = useState(null);
+
+  const fetchData = () => {
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then((resp) => resp.json())
+    .then((apiData) =>{
+      setData(apiData.message);
+    });
+  };
+ useEffect(() => {
+  fetch("https://dog.ceo/api/breeds/image/random")
+  .then((resp) => resp.json())
+  .then((apiData) => {
+    setData(apiData.message);
+  });
+ }, []);
+  
+ return(
+  <div>
+  <h1 style={{textAlign:"center"}}>
+  Welcome to Dogz World 🐶
+  </h1>
+  <button onClick={fetchData}> Dog Generator</button>
+  <img width={300} src={data}/>
+  </div>
+ );
 }
 
 export default App;
